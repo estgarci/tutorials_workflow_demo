@@ -11,13 +11,13 @@ from tutorials.serializers import TutorialSerializer
 from rest_framework.decorators import api_view
 
 # Create your views here.
-# def index(request):
-#     return render(request, "tutorials/index.html")
+def index(request):
+    return render(request, "tutorials/index.html")
 
 
-# def index(request):
-#     queryset = Tutorial.objects.all()
-#     return render(request, "tutorials/index.html", {'tutorials': queryset})
+def index(request):
+    queryset = Tutorial.objects.all()
+    return render(request, "tutorials/index.html", {'tutorials': queryset})
 
 class index(APIView):
     renderer_classes = [TemplateHTMLRenderer]
